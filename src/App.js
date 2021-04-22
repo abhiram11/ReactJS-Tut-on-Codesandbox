@@ -18,10 +18,17 @@ export default function App() {
   function emojiSearcher(event) {
     // console.log(emojiDictionary[event.target.value]);
 
-    var meaning = emojiDictionary[event.target.value];
+    // var meaning = emojiDictionary[event.target.value];
 
-    if (meaning === undefined) {
-      meaning = "Meaning not Found";
+    // if (meaning === undefined) {
+    //   meaning = "Meaning not Found";
+    // }
+    // setEmoji(meaning);
+
+    var meaning = "meaning not found!";
+
+    if (event.target.value in emojiDictionary) {
+      var meaning = emojiDictionary[event.target.value];
     }
     setEmoji(meaning);
   }
